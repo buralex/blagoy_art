@@ -32,61 +32,6 @@ html {
                         RESPONSIVE 
 
 ----------------------------------------------------------------------------- */
-@media (max-width: 767px) {
-  div.main-header {
-    display: none; } }
-@media (max-width: 991px) {
-  div.wrapper {
-    padding: 0 13px 0 13px; }
-
-  div.main-header {
-    padding: 30px 17px 0 17px; }
-
-  figure.main-header__logo {
-    padding: 0; }
-    figure.main-header__logo img {
-      width: 180px;
-      height: auto; }
-    figure.main-header__logo figcaption {
-      font-size: 1.2rem; }
-
-  div.main-header__search div.parent {
-    margin: 0 0 0 -30px;
-    width: 105%; }
-
-  div.main-header__search .search-field {
-    font-size: 1.2rem;
-    height: 30px; }
-  div.main-header__search .search-button {
-    top: 6px;
-    right: 7px;
-    background: url(../img/icon-search.png) 100% 50% no-repeat;
-    background-size: 80%; }
-
-  div.main-header__work-info {
-    padding: 0 0 0 0; }
-    div.main-header__work-info .hours p {
-      font-size: 1rem; }
-    div.main-header__work-info .phone {
-      padding: 5px 15px 0 0;
-      font-size: 1.6rem;
-      letter-spacing: -0.05rem; } }
-@media (max-width: 1199px) {
-  figure.main-header__logo img {
-    width: 180px;
-    height: auto; }
-  figure.main-header__logo figcaption {
-    font-size: 1.2rem; }
-
-  div.main-header {
-    padding: 30px 20px 0 20px; }
-
-  nav.navbar-default {
-    margin: 0 5px; } }
-@media (min-width: 1200px) and (max-width: 1500px) {
-  .main-header__search div.parent {
-    width: 90%;
-    margin: 0 0 0 30px; } }
 /* -----------------------------------------------------------------------------
 
                 VARIABLES
@@ -109,7 +54,6 @@ body {
   padding: 0 0 0 0;
   min-width: 320px;
   position: relative;
-  overflow: hidden;
   min-height: 100%; }
 
 .wrapper {
@@ -178,7 +122,6 @@ h2 {
 ================================================================================
 */
 header {
-  background: url(../img/bg_header.jpg) no-repeat;
   width: 100%;
   min-width: 320px;
   text-align: left;
@@ -187,180 +130,65 @@ header {
   top: 0px;
   z-index: 1; }
 
-.main-header {
-  padding: 30px 70px 0 70px; }
-
-.main-header__logo {
-  padding: 5px 0 0 0;
-  margin: 0; }
-  .main-header__logo figcaption {
-    padding: 6px 0 0 0;
-    font-size: 1.4rem;
-    color: #747688; }
-
-.main-header__work-info {
-  padding: 0 0 0 0;
-  white-space: nowrap; }
-  .main-header__work-info .hours {
-    display: inline-block;
-    vertical-align: middle; }
-    .main-header__work-info .hours p {
-      font-size: 1.4rem;
-      margin: 0;
-      padding: 0 0 5px 0; }
-  .main-header__work-info .phone {
-    display: inline-block;
-    padding: 5px 15px 0 0;
-    font-size: 2.3rem; }
-
-/*----------------------------- search form ---------------------------------*/
-.main-header__search {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  /* Firefox 19+ */
-  /* Firefox 18- */ }
-  .main-header__search .parent {
-    position: relative;
-    margin: 0 0 0 -30px;
-    width: 105%; }
-  .main-header__search.dropped {
-    display: inline-block !important; }
-  .main-header__search .search-field {
-    font-size: 1.4rem;
-    padding-left: 10px;
-    padding-right: 25px;
-    outline: none;
-    color: #b8b8bd;
-    height: 40px;
-    width: 100%;
-    border: 1px solid #b9b8bd;
-    border-radius: 5px; }
-  .main-header__search .search-field:focus {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
-  .main-header__search .search-field::-webkit-input-placeholder {
-    color: #b8b8bd; }
-  .main-header__search .search-field::-moz-placeholder {
-    color: #b8b8bd; }
-  .main-header__search .search-field:-moz-placeholder {
-    color: #b8b8bd; }
-  .main-header__search .search-field:-ms-input-placeholder {
-    color: #b8b8bd; }
-  .main-header__search .search-button {
-    outline: none;
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    top: 11px;
-    right: 10px;
-    border: none;
-    background: url(../img/icon-search.png) 100% 50% no-repeat;
-    opacity: 0.5; }
-  .main-header__search .search-button:hover {
-    cursor: pointer;
-    opacity: 1; }
-
-/*------------------------------------------------------------------
-                         NAV
--------------------------------------------------------------------*/
-.navbar-default {
-  margin: 0 55px;
-  background-color: transparent;
-  border-left: none;
-  border-right: none;
-  border-color: #dddfdf; }
-
-.navbar-default .navbar-nav > li > a {
-  color: #181818;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.6rem; }
-
-.navbar-default .navbar-nav > .active > a {
-  background-color: #fafafa; }
-
-.navbar-nav > li > a {
-  padding: 20px 10px 20px 10px; }
-
-.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
-  background-color: transparent; }
-
-.navbar-default .navbar-nav > li > a:hover {
-  color: #181818;
-  font-weight: normal;
-  background-color: transparent; }
-
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
-  font-weight: normal;
-  color: #181818;
-  background-color: transparent; }
-
-.navbar-toggle {
-  float: left; }
-
-.dropdown-menu > li h3 {
-  padding: 0 10px 0 0;
-  margin: 5px 10px 5px 17px;
-  text-transform: uppercase;
-  color: #cb944c;
-  font-size: 1.6rem; }
-
-.dropdown-menu > li > a {
-  position: relative;
-  padding: 3px 65px 3px 30px;
-  color: #666666;
-  font-size: 1.5rem; }
-  .dropdown-menu > li > a::before {
-    display: block;
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    bottom: 10px;
-    left: 15px;
-    content: "";
-    background: url(../img/caret-circle.png) no-repeat; }
-
-.caret-prod {
-  display: block;
-  width: 16px;
-  height: 13px;
-  position: absolute;
-  left: -18px;
-  bottom: 22px;
-  background: url(../img/caret-prod.png) no-repeat; }
-
-.caret-arrow {
-  display: inline-block;
-  width: 11px;
-  height: 8px;
-  margin: 0 0 0 12px;
-  left: -10px;
-  bottom: 22px;
-  background: url(../img/caret-arrow.png) no-repeat; }
-
+/**/
 .dropdown-submenu {
   position: relative; }
 
-.dropdown-submenu .dropdown-menu {
+.dropdown-submenu > .dropdown-menu {
   top: 0;
   left: 100%;
-  margin-top: -1px; }
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px 6px;
+  border-radius: 0 6px 6px 6px; }
 
-.cart {
-  display: inline-block;
-  width: 23px;
-  height: 23px;
-  margin: 0 0 0 12px;
-  position: absolute;
-  left: -10px;
-  bottom: 22px;
-  background: url(../img/cart.png) no-repeat; }
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px; }
 
-.navbar .navbar-right li a {
-  color: #252a54;
-  font-size: 1.6rem; }
+.dropdown-submenu:hover > a:after {
+  border-left-color: #555; }
 
+.dropdown-submenu.pull-left {
+  float: none; }
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px; }
+
+.navbar-default {
+  background-color: transparent;
+  border-color: #dddfdf; }
+  .navbar-default .navbar-nav > .active > a {
+    color: inherit;
+    background-color: #dddfdf; }
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+  color: inherit;
+  background-color: transparent; }
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+  color: inherit;
+  background-color: transparent; }
+
+.main-nav {
+  margin: 90px 0 0 0;
+  float: none; }
+
+/**/
 /*
 ================================================================================
 |                                     CONTENT                                 |
@@ -377,7 +205,6 @@ header {
 ================================================================================
 */
 footer {
-  background: url(../img/bg_footer.jpg) no-repeat;
   height: 81px;
   text-align: left;
   position: absolute;

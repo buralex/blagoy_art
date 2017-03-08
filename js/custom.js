@@ -1,4 +1,4 @@
-$(window).load(function(){
+$(window).on("load", function(){
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 		$('body').addClass('ios');
 	};
@@ -50,8 +50,8 @@ var handler = function(){
 	}
 	
 }
-$(window).bind('load', handler);
-$(window).bind('resize', handler);
+$(window).on('load', handler);
+$(window).on('resize', handler);
 
 
 
