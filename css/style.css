@@ -32,6 +32,9 @@ html {
                         RESPONSIVE 
 
 ----------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  div.main-header {
+    display: none; } }
 @media (max-width: 991px) {
   div.wrapper {
     padding: 0 13px 0 13px; }
@@ -76,7 +79,10 @@ html {
     font-size: 1.2rem; }
 
   div.main-header {
-    padding: 30px 20px 0 20px; } }
+    padding: 30px 20px 0 20px; }
+
+  nav.navbar-default {
+    margin: 0 5px; } }
 @media (min-width: 1200px) and (max-width: 1500px) {
   .main-header__search div.parent {
     width: 90%;
@@ -258,6 +264,103 @@ header {
 /*------------------------------------------------------------------
                          NAV
 -------------------------------------------------------------------*/
+.navbar-default {
+  margin: 0 55px;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-color: #dddfdf; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #181818;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.6rem; }
+
+.navbar-default .navbar-nav > .active > a {
+  background-color: #fafafa; }
+
+.navbar-nav > li > a {
+  padding: 20px 10px 20px 10px; }
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+  background-color: transparent; }
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #181818;
+  font-weight: normal;
+  background-color: transparent; }
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+  font-weight: normal;
+  color: #181818;
+  background-color: transparent; }
+
+.navbar-toggle {
+  float: left; }
+
+.dropdown-menu > li h3 {
+  padding: 0 10px 0 0;
+  margin: 5px 10px 5px 17px;
+  text-transform: uppercase;
+  color: #cb944c;
+  font-size: 1.6rem; }
+
+.dropdown-menu > li > a {
+  position: relative;
+  padding: 3px 65px 3px 30px;
+  color: #666666;
+  font-size: 1.5rem; }
+  .dropdown-menu > li > a::before {
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    bottom: 10px;
+    left: 15px;
+    content: "";
+    background: url(../img/caret-circle.png) no-repeat; }
+
+.caret-prod {
+  display: block;
+  width: 16px;
+  height: 13px;
+  position: absolute;
+  left: -18px;
+  bottom: 22px;
+  background: url(../img/caret-prod.png) no-repeat; }
+
+.caret-arrow {
+  display: inline-block;
+  width: 11px;
+  height: 8px;
+  margin: 0 0 0 12px;
+  left: -10px;
+  bottom: 22px;
+  background: url(../img/caret-arrow.png) no-repeat; }
+
+.dropdown-submenu {
+  position: relative; }
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px; }
+
+.cart {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin: 0 0 0 12px;
+  position: absolute;
+  left: -10px;
+  bottom: 22px;
+  background: url(../img/cart.png) no-repeat; }
+
+.navbar .navbar-right li a {
+  color: #252a54;
+  font-size: 1.6rem; }
+
 /*
 ================================================================================
 |                                     CONTENT                                 |
