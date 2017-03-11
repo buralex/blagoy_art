@@ -57,6 +57,7 @@ button.slick-prev, button.slick-next {
     background: #fff;
 	}
 
+
 	.navbar-collapse.in {
 		position: relative;
 		z-index:10;
@@ -449,6 +450,11 @@ header{
     }
 }
 
+.navbar-static-top {
+    //z-index: 1000;
+    border-width: 0 0 0px;
+}
+
 .dropdown-submenu {
     position: relative;
 }
@@ -711,7 +717,7 @@ header{
 		
 		&.icons-home {
 		  background: url(../img/home.png) no-repeat;
-		  background-size: contain;
+		  //background-size: contain;
 		}
 		&.icons-search {
 		  background: url(../img/search.png) no-repeat;
@@ -731,12 +737,14 @@ header{
 		}
  }
  
+
+ 
 	figure.mobile__logo {
 		display: none;
 	}
  
  .icons li:hover {
-     background: #FFFFFF;
+     //background: #FFFFFF;
  }
 
 
@@ -759,9 +767,9 @@ header{
 
 .slider-blagoy {
 	
-	position: relative;
+	//position: relative;
 	z-index: 0;
-	&>div {
+	.slider-blagoy__item {
 		position: relative;
 	}
 	img {
@@ -908,3 +916,31 @@ footer{
 
 
 /*------------------- end highlighting -------------------------*/
+
+
+
+
+/*---------------------------------------------------------
+								redefining bootstrap grid
+----------------------------------------------------------*/
+
+$font-size-base:  14px;
+/* A zero-width web font for clearing whitespace between inline-blocks (https://github.com/patrickkunka/zero-width) */
+@import url('//cdn.jsdelivr.net/font-zero-width/latest/zero-width.css');
+
+
+.row--inline-blocks {
+  font-size: 0;
+  font-family: "zero-width";
+  
+  > [class*="col-"] {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    font-size: $font-size-base;
+  }
+}
+
+/*---------------------------------------------------------
+							end 	redefining bootstrap grid
+----------------------------------------------------------*/

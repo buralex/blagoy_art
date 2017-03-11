@@ -8,6 +8,7 @@
   BOX SIZING RESET
   
 ----------------------------------------------------------------------------- */
+@import url("//cdn.jsdelivr.net/font-zero-width/latest/zero-width.css");
 *,
 *::before,
 *::after {
@@ -357,6 +358,9 @@ header {
   .main-navbar.navbar-default .navbar-nav > li > a:hover {
     color: #3dade3; }
 
+.navbar-static-top {
+  border-width: 0 0 0px; }
+
 .dropdown-submenu {
   position: relative; }
 
@@ -566,8 +570,7 @@ button.navbar-toggle {
   padding: 10px 10px 5px 10px;
   margin-top: 10px; }
   .icons li.icons-home {
-    background: url(../img/home.png) no-repeat;
-    background-size: contain; }
+    background: url(../img/home.png) no-repeat; }
   .icons li.icons-search {
     background: url(../img/search.png) no-repeat;
     background-size: contain; }
@@ -584,9 +587,6 @@ button.navbar-toggle {
 figure.mobile__logo {
   display: none; }
 
-.icons li:hover {
-  background: #FFFFFF; }
-
 /**/
 /*
 ================================================================================
@@ -600,9 +600,8 @@ figure.mobile__logo {
 
 /*------------------------ slider -----------------------------*/
 .slider-blagoy {
-  position: relative;
   z-index: 0; }
-  .slider-blagoy > div {
+  .slider-blagoy .slider-blagoy__item {
     position: relative; }
   .slider-blagoy img {
     height: auto;
@@ -723,5 +722,21 @@ footer {
   outline: 1px solid red; }
 
 /*------------------- end highlighting -------------------------*/
+/*---------------------------------------------------------
+								redefining bootstrap grid
+----------------------------------------------------------*/
+/* A zero-width web font for clearing whitespace between inline-blocks (https://github.com/patrickkunka/zero-width) */
+.row--inline-blocks {
+  font-size: 0;
+  font-family: "zero-width"; }
+  .row--inline-blocks > [class*="col-"] {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px; }
+
+/*---------------------------------------------------------
+							end 	redefining bootstrap grid
+----------------------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */
