@@ -97,6 +97,32 @@ function navbar(collapse) {
 	window.addEventListener("resize", function(e) { handler() }.debounce(10));
 }
 
+	$('.dropdown').on('click', function(event) {
+		 event.preventDefault(); 
+		 event.stopPropagation(); 
+		 $(this).children('.sub-menu').slideToggle(200);
+		 $(this).siblings().children('.sub-menu').hide();
+	});
+	
+	$('.dropdown--first').on('click', function(event) {
+		 event.preventDefault(); 
+		 event.stopPropagation(); 
+		 
+		 document.querySelector('.dropdown__chevron-down').classList.toggle('dropdown__chevron-down--opened');
+	});
+			
+
+	window.onclick = function(event) {
+		if (!event.target.matches('.dropdown, .sub-menu')) {
+			document.querySelector('.dropdown__chevron-down').classList.remove('dropdown__chevron-down--opened');
+			$('.sub-menu').each(function(){
+				$(this).slideUp(200);
+			});
+		}
+	}
+	
+	
+
 /* -----------------------------------------------------------------------------*/
 
 
