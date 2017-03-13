@@ -1,21 +1,19 @@
+/*---------------------------------------------------------------
+
+						CUSTOM
+						
+----------------------------------------------------------------*/
+
+
 $(window).on("load", function(){
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 		$('body').addClass('ios');
 	};
 	$('body').removeClass('loaded'); 
 });
-/* viewport width */
-function viewport(){
-	var e = window, 
-		a = 'inner';
-	if ( !( 'innerWidth' in window ) )
-	{
-		a = 'client';
-		e = document.documentElement || document.body;
-	}
-	return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
-};
-/* viewport width */
+
+
+
 $(function(){
 	/* placeholder*/	   
 	$('input, textarea').each(function(){
@@ -32,26 +30,74 @@ $(function(){
 		$('.main-nav-list').slideToggle(); 
 		return false;
 	});
-	
-
 });
 
-var handler = function(){
+/*------------------------------------------------------------------------------
+
+						DEBOUNCE
+						
+------------------------------------------------------------------------------*/
+Function.prototype.debounce = function (milliseconds) {
+    var baseFunction = this,
+        timer = null,
+        wait = milliseconds;
+
+    return function () {
+        var self = this,
+            args = arguments;
+
+        function complete() {
+            baseFunction.apply(self, args);
+            timer = null;
+        }
+
+        if (timer) {
+            clearTimeout(timer);
+        }
+
+        timer = setTimeout(complete, wait);
+    };
+};
+/* -----------------------------------------------------------------------------
+
+                      STICKY FOOTER     with responsive height 
+  
+----------------------------------------------------------------------------- */
+
+function stickyFooter(footerContainer, wrapCont) {
+    
+    function stick() {
+        var footerHeight = document.querySelector(footerContainer).offsetHeight;
+        document.querySelector(footerContainer).style.cssText = "margin-top: -" + footerHeight + "px;";
+        document.querySelector(wrapCont).style.cssText = "padding-bottom: " + footerHeight + "px;";
+        
+    }
 	
-	var height_footer = $('footer').height();	
-	var height_header = $('header').height();	
-	$('.content').css({'padding-bottom':height_footer+40, 'padding-top':height_header+40});
+   window.addEventListener("load", function(e) { stick() }.debounce(10));
+   window.addEventListener("resize", function(e) { stick() }.debounce(10));
+   
+}
+
+/* -----------------------------------------------------------------------------
+
+                         NAVBAR 
+  
+----------------------------------------------------------------------------- */
+function navbar(collapse) {
 	
-	
-	var viewport_wid = viewport().width;
-	
-	if (viewport_wid <= 991) {
-		
+	function handler() {
+		if (window.innerWidth < 769) {
+			document.querySelector(collapse).classList.add('navbar__collapse--in');
+		} else {
+			document.querySelector(collapse).classList.remove('navbar__collapse--in');
+		}
 	}
 	
+	window.addEventListener("load", function(e) { handler() }.debounce(10));
+	window.addEventListener("resize", function(e) { handler() }.debounce(10));
 }
-$(window).on('load', handler);
-$(window).on('resize', handler);
+
+/* -----------------------------------------------------------------------------*/
 
 
 
