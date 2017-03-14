@@ -144,7 +144,6 @@ p {
 	line-height: 1.1em;
 	padding: 15px 0 15px 0;
 	font-weight: 400;
-	//color: #17202f;
 }
 
 h1 {
@@ -152,7 +151,6 @@ h1 {
 	line-height: 1.1em;
 	padding: 15px 0 15px 0;
 	font-weight: 400;
-	//color: #17202f;
 }
 
 h2 {
@@ -160,7 +158,6 @@ h2 {
 	line-height: 1.1em;
 	padding: 15px 0 15px 0;
 	font-weight: 400;
-	//color: #17202f;
 }
 
 /* text position */
@@ -270,7 +267,6 @@ header {
 
 .main-header__work-info {
 	text-align: right;
-	float: right;
 	min-width: 200px;
 	padding: 0 0 0 0;
 	white-space: nowrap;
@@ -278,7 +274,7 @@ header {
 .info-phone {
 	text-decoration: none;
 	display: inline-block;
-	padding: 10px 15px 0 0;
+	padding: 8px 15px 0 0;
 	font-size: 2.3rem;
 	color: $black;
 }
@@ -510,8 +506,8 @@ p.info-delivery {
 
 /*--------------------- EOF NAVBAR ---------------------------------------*/
 
-.navbar__right {
-	float: right;	
+.navbar-right {
+	text-align: right;	
 }
 
 .register,
@@ -524,7 +520,7 @@ p.info-delivery {
 		display: block;
 		text-decoration: none;
 		text-transform: uppercase;
-		padding: 17px 0 17px 0;
+		padding: 12px 0 8px 0;
 		color: $dark-blue-grey;
 	}
 }
@@ -545,7 +541,7 @@ p.info-delivery {
 	margin: 0 0 0 12px;
 	position: absolute;
 	left: -45px;
-	bottom: 17px;
+	bottom: 8px;
 	background: url(../img/icon-cart.png) no-repeat;
 	background-size: contain;
 }
@@ -751,6 +747,27 @@ footer {
 
 ----------------------------------------------------------------------------- */
 
+//------------------------------------------------------------------------------
+@media (min-width: 1280px) { 
+	
+	.navbar-right {
+		position: absolute;
+		right: 10px;
+		top: 77px;
+	}
+	
+}
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+@media (min-width: 769px) { 
+	
+	.navbar__collapse {
+		display: block !important;
+	}
+	
+}
+//------------------------------------------------------------------------------
+
 
 
 //------------------------------------------------------------------------------
@@ -775,15 +792,7 @@ footer {
 	.main-header__search {
 		width: 30.5%;
 	}
-	
-	.navbar__right {
-		position: absolute;
-    right: 10px;
-    bottom: 60px;
-	}
-	.main-header__row-bottom {
-    margin: 30px auto 0 auto;
-	}
+
 	.main-footer__content {
 		margin: 0;
 	}
@@ -836,7 +845,7 @@ footer {
     height: 15px;
     margin: 0 0 0 12px;
     left: -33px;
-    bottom: 20px;
+    bottom: 12px;
 	}
 	
 	.cart__quantity {
@@ -862,10 +871,10 @@ footer {
 	
 	.main-header__row-top {
     margin: 23px auto 0 auto;
-    padding: 0 10px 13px 10px;
+    padding: 0 15px 0 15px;
 	}
 	.main-header__row-bottom {
-    margin: 15px auto 0 auto;
+    margin: 0 auto 0 auto;
 	}
 	
 	.logo--desktop {
@@ -879,11 +888,7 @@ footer {
     font-size: 1.3rem;
     margin: 4px 0 0 0;
 	}
-	.navbar__right {
-		position: absolute;
-    right: 10px;
-    bottom: 45px;
-	}
+
 	.navbar__content > li {
 		& > a {
 			display: inline-block;
@@ -965,9 +970,13 @@ footer {
 //------------------------------------------------------------------------------
 @media (max-width: 768px) {
 	
+	.navbar__collapse {
+		display: none;
+	}
+	
 	.main-header__search {
 		margin: 0;
-		position: fixed;
+		position: absolute;
 		width: 300px;
 		z-index: 10;
 		top: 60px;
@@ -976,29 +985,29 @@ footer {
 	.cart {
 		text-align: right;
 		margin: 0;
-		position: fixed;
+		position: absolute;
 		width: 300px;
 		z-index: 10;
-		top: 60px;
-		right: 10px;
+		top: 50px;
+		right: 20px;
 	}
 	.cart__icon {
 		left: 125px;
 	}
 	.register {
 		margin: 0;
-		position: fixed;
+		position: absolute;
 		width: 300px;
 		z-index: 10;
-		top: 60px;
-		right: 10px;
+		top: 50px;
+		right: 20px;
 		a {
 			text-align: right;
 		}
 	}
 	.main-header__work-info {
 		margin: 0;
-		position: fixed;
+		position: absolute;
 		width: 300px;
 		z-index: 10;
 		top: 60px;
@@ -1025,18 +1034,6 @@ footer {
 		display: block;
 	}
 	
-	.main-header__search {
-		display: none;
-	}
-	.register {
-		display: none;
-	}
-	.cart {
-		display: none;
-	}
-	.main-header__work-info {
-		display: none;
-	}
 	.main-header__row-top {
 		padding: 0;
 		margin: 0;
