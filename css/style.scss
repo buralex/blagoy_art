@@ -183,12 +183,9 @@ h2 {
 ------------------------------------------------------------------------------*/
 
 header {
-	//background:url(../img/bg_header.jpg) no-repeat;
 	width:100%;
 	min-width: 320px;
 	text-align:left;
-	//position:absolute;
-	//left:0px; top:0px;
 	z-index:1;
 }
 	
@@ -317,6 +314,7 @@ p.info-delivery {
 }
 
 .navbar__content,
+.main-footer__content,
 .navbar__header,
 .navbar__i,
 .sub-menu {
@@ -353,7 +351,7 @@ p.info-delivery {
 }
 
 
-.navbar__content > li {
+.navbar__content > li, .main-footer__content > li {
 	display: inline-block;
 	
 	& > a {
@@ -418,8 +416,6 @@ p.info-delivery {
   position: absolute;
   left: -10px;
   top: 65px;	
-  //width: 200px;
-  //height: 266px;
   border-radius: 3px;
   background-color: $white;
   box-shadow: 1.5px 2.6px 1px 0 rgba(108, 104, 104, 0.33);
@@ -469,24 +465,6 @@ p.info-delivery {
 	}
 }
 
-	// .icons {
-	// 	display: none;
-	// }
-
-	// button.navbar-toggle {
-	//   float: left;
-	//   padding: 9px 10px 8px 10px;
-	//   margin-top: 0;
-	//   height: 40px;
-	//   width: 55px;
-	//   margin-bottom: 0;
-	//   background-color: #3eade2;
-	//   border: none;
-	//   border-radius: 0;
-	// }
-	// .navbar-default .navbar-toggle .icon-bar {
- //   background-color: #f0f1f6;
-	// }
 
  .navbar__i {
      text-align: justify;
@@ -506,7 +484,7 @@ p.info-delivery {
 		
 		&.navbar__i-home {
 		  background: url(../img/home.png) no-repeat;
-		  //background-size: contain;
+
 		}
 		&.navbar__i-search {
 		  background: url(../img/search.png) no-repeat;
@@ -613,7 +591,7 @@ p.info-delivery {
 	width:100%;
 	min-width: 320px;
 	text-align:left;
-	//background:#000;
+
 }
 
 /*------------------------ SLIDER -----------------------------*/
@@ -623,8 +601,7 @@ p.info-delivery {
 }
 
 .slider-blagoy {
-	
-	//position: relative;
+	margin-bottom: 45px;
 	z-index: 0;
 	.slider-blagoy__item {
 		position: relative;
@@ -656,7 +633,6 @@ p.info-delivery {
   top: 30%;
   padding: 0 11px;
   border: none;
-  //opacity: 0.9;
   background: $tan;
   
   &::before {
@@ -670,7 +646,6 @@ p.info-delivery {
   }
 
   &:hover {
-  	//opacity: 0.3;
   	cursor: pointer;
   	background: $white-opacity;
   }
@@ -750,12 +725,24 @@ p.info-delivery {
 ------------------------------------------------------------------------------*/
 
 footer {
-	//background:url(../img/bg_footer.jpg) no-repeat; 
 	padding: 5px;
-	background: silver;
 	text-align:left;
 	width:100%;
 	min-width: 320px;
+}
+
+
+
+.main-footer__content {
+	margin: 0 55px;
+	text-align: center;
+	border-top: 1px solid $silver;
+	border-bottom: 1px solid $silver;
+}
+.main-footer__copyright {
+	text-align: center;
+	margin: 10px auto;
+	font-size: 1.2rem;
 }
 
 /* -----------------------------------------------------------------------------
@@ -780,10 +767,6 @@ footer {
 //------------------------------------------------------------------------------
 @media (max-width: 1280px) {
 	
-	// .logo--desktop {
-	// 	display: none;
-	// }
-	
 	.slider-blagoy__caption {
 		font-size: 3rem;
 		width: 425px;
@@ -800,6 +783,9 @@ footer {
 	}
 	.main-header__row-bottom {
     margin: 30px auto 0 auto;
+	}
+	.main-footer__content {
+		margin: 0;
 	}
 }
 //------------------------------------------------------------------------------
@@ -896,12 +882,12 @@ footer {
 	.navbar__right {
 		position: absolute;
     right: 10px;
-    bottom: 48px;
+    bottom: 45px;
 	}
 	.navbar__content > li {
 		& > a {
 			display: inline-block;
-			padding: 20px 5px 20px 20px;
+			padding: 18px 5px 18px 20px;
 			font-size: 1.3rem;
 		}
 	}
@@ -1006,6 +992,9 @@ footer {
 		z-index: 10;
 		top: 60px;
 		right: 10px;
+		a {
+			text-align: right;
+		}
 	}
 	.main-header__work-info {
 		margin: 0;
@@ -1049,12 +1038,10 @@ footer {
 		display: none;
 	}
 	.main-header__row-top {
-		//display: none;
 		padding: 0;
 		margin: 0;
 	}
 	.main-header__row-bottom {
-		//display: none;
 		border: none;
 		padding: 0;
 		margin: 0px auto 0 auto;
@@ -1074,9 +1061,7 @@ footer {
 	.sub-menu {
 		position: static;
 	}
-	.content {
-    //margin: 75px 0 0 0;
-	}
+
 	.logo--mob {
 		z-index: 11;
 		display: block;
@@ -1110,7 +1095,6 @@ footer {
 	.slick-prev, .slick-next {
     height: 22.6%;
 		top: 38.7%;
-    //padding: 0 5px;
 	}
 	
 }

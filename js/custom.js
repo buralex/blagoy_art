@@ -83,63 +83,6 @@ function navbar(collapse, toggle) {
 	var navbar = document.querySelector(collapse);
 	var toggle = document.querySelector(toggle);
 	
-	/*menu mobile */
-	var toggleSearch = document.querySelector('.navbar__i-search');
-	var toggleCart = document.querySelector('.navbar__i-cart');
-	var toggleRegister = document.querySelector('.navbar__i-register');
-	var toggleContact = document.querySelector('.navbar__i-contact');
-	var logo = document.querySelector('.logo--mob');
-	
-	
-	var li = document.querySelectorAll('.navbar__i > li');  // array of li elements
-	
-	for (var i = 0; i < li.length; i++) {
-	    var link = li[i];
-	    handleClick(link, i);
-	}  
-      
-      function handleClick(link, index) {
-      link.addEventListener('click', function(e) {
-        
-        $(link).slideToggle(200);
-        //document.querySelector(nav).classList.remove(removeClass);
-        //document.querySelector(navbar).classList.add(navbarHide);
-        
-        //var anchor = link.children[0].getAttribute("href");
-        
-        /*--------------- add animations for sections (self-exec) -----------------*/
-   
-         /*--------------- end add animations -----------------*/
-        
-      });
-    };
-	
-	
-	
-	
-		// function clen(argument) {
-		// 	// body...
-		// }
-	
-		// toggleSearch.addEventListener("click", function(e) {
-		// 	$('.main-header__search').slideToggle(200);
-		// 	logo.classList.toggle('hidden');
-		// });
-		// toggleCart.addEventListener("click", function(e) {
-		// 	$('.cart').slideToggle(200);
-		// 	logo.classList.toggle('hidden');
-		// });
-		// toggleRegister.addEventListener("click", function(e) {
-		// 	$('.register').slideToggle(200);
-		// 	logo.classList.toggle('hidden');
-		// });
-		// toggleContact.addEventListener("click", function(e) {
-		// 	$('.main-header__work-info').slideToggle(200);
-		// 	logo.classList.toggle('hidden');
-		// });
-		
-	/*menu mobile */
-	
 	toggle.addEventListener("click", function(e) {
 		this.classList.toggle('active');
 		$(collapse).slideToggle(200);
@@ -152,6 +95,10 @@ function navbar(collapse, toggle) {
 		} else {
 			toggle.classList.remove('active');
 			navbar.style.cssText ="display: block;";
+			document.querySelector('.cart');
+			document.querySelector('.main-header__search');
+			document.querySelector('.register');
+			document.querySelector('.main-header__work-info');
 		}
 	}
 	
@@ -184,6 +131,44 @@ function navbar(collapse, toggle) {
 	}
 	
 	
+	
+		/*menu mobile */
+	var li = document.querySelectorAll('.navbar__i > li');
+	var toggleSearch = document.querySelector('.navbar__i-search');
+	var toggleCart = document.querySelector('.navbar__i-cart');
+	var toggleRegister = document.querySelector('.navbar__i-register');
+	var toggleContact = document.querySelector('.navbar__i-contact');
+	var toggleHome = document.querySelector('.navbar__i-home');
+	var prev = document.querySelector('.logo--mob');
+	//var prev ="";
+		
+		toggleHome.addEventListener("click", function(e) {
+			$(prev).slideUp(200);
+			$('.logo--mob').slideToggle(200);
+			prev = '.logo--mob';
+		});
+		toggleSearch.addEventListener("click", function(e) {
+			$(prev).slideUp(200);
+			$('.main-header__search').slideToggle(200);
+			prev = '.main-header__search';
+		});
+		toggleCart.addEventListener("click", function(e) {
+			$(prev).slideUp(200);
+			$('.cart').slideToggle(200);
+			prev ='.cart';
+		});
+		toggleRegister.addEventListener("click", function(e) {
+			$(prev).slideUp(200);
+			$('.register').slideToggle(200);
+			prev ='.register';
+		});
+		toggleContact.addEventListener("click", function(e) {
+			$(prev).slideUp(200);
+			$('.main-header__work-info').slideToggle(200);
+			prev ='.main-header__work-info';
+		});
+		
+	/*menu mobile */
 
 /* -----------------------------------------------------------------------------*/
 

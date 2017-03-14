@@ -249,6 +249,7 @@ p.info-delivery {
   float: left; }
 
 .navbar__content,
+.main-footer__content,
 .navbar__header,
 .navbar__i,
 .sub-menu {
@@ -280,9 +281,9 @@ p.info-delivery {
   .navbar-toggle.active {
     background-color: #81c9ec; }
 
-.navbar__content > li {
+.navbar__content > li, .main-footer__content > li {
   display: inline-block; }
-  .navbar__content > li > a {
+  .navbar__content > li > a, .main-footer__content > li > a {
     display: inline-block;
     padding: 20px 10px;
     text-decoration: none;
@@ -290,7 +291,7 @@ p.info-delivery {
     font-weight: bold;
     color: #181818;
     font-size: 1.6rem; }
-    .navbar__content > li > a:hover {
+    .navbar__content > li > a:hover, .main-footer__content > li > a:hover {
       color: #3eade2; }
 
 .dropdown {
@@ -489,6 +490,7 @@ p.info-delivery {
   display: none; }
 
 .slider-blagoy {
+  margin-bottom: 45px;
   z-index: 0; }
   .slider-blagoy .slider-blagoy__item {
     position: relative; }
@@ -588,10 +590,20 @@ p.info-delivery {
 ------------------------------------------------------------------------------*/
 footer {
   padding: 5px;
-  background: silver;
   text-align: left;
   width: 100%;
   min-width: 320px; }
+
+.main-footer__content {
+  margin: 0 55px;
+  text-align: center;
+  border-top: 1px solid #dddfdf;
+  border-bottom: 1px solid #dddfdf; }
+
+.main-footer__copyright {
+  text-align: center;
+  margin: 10px auto;
+  font-size: 1.2rem; }
 
 /* -----------------------------------------------------------------------------
 
@@ -615,7 +627,10 @@ footer {
     bottom: 60px; }
 
   .main-header__row-bottom {
-    margin: 30px auto 0 auto; } }
+    margin: 30px auto 0 auto; }
+
+  .main-footer__content {
+    margin: 0; } }
 @media (max-width: 1050px) {
   .main-header__search {
     width: 28.5%;
@@ -694,11 +709,11 @@ footer {
   .navbar__right {
     position: absolute;
     right: 10px;
-    bottom: 48px; }
+    bottom: 45px; }
 
   .navbar__content > li > a {
     display: inline-block;
-    padding: 20px 5px 20px 20px;
+    padding: 18px 5px 18px 20px;
     font-size: 1.3rem; }
 
   .wrapper {
@@ -775,6 +790,8 @@ footer {
     z-index: 10;
     top: 60px;
     right: 10px; }
+    .register a {
+      text-align: right; }
 
   .main-header__work-info {
     margin: 0;
