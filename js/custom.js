@@ -98,7 +98,6 @@ function navbar(collapse, toggle) {
 	    handleClick(link, i);
 	}  
       
-      
       function handleClick(link, index) {
       link.addEventListener('click', function(e) {
         
