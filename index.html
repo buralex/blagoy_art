@@ -22,7 +22,7 @@
 	<header class="main-header ">
 		<div class="wrapper">
 			<div class="main-header__row-top clearfix ">
-				<figure class="logo logo--desktop">
+				<figure class="logo logo--desktop logo--mob">
           <a href="#">
           	<img class="" src="img/logo.png" title="Blagoy Art" alt="Blagoy Art" width="247" height="30">
           </a>
@@ -53,7 +53,7 @@
 	              <span class="icon-bar"></span>
 	          </button>
 	          <ul class="navbar__i">
-					    <li class="navbar__i-home"></li>
+					    <li class="navbar__i-home"><a href="#"></a></li>
 					    <li class="navbar__i-search"></li>
 					    <li class="navbar__i-cart"></li>
 					    <li class="navbar__i-register"></li>
@@ -113,14 +113,6 @@
 			
 		</div>
 	</header>
-	<div class="wrapper">
-		<figure class="logo logo--mobile">
-		    <a href="#">
-		    	<img class="" src="img/logo.png" title="Blagoy Art" alt="Blagoy Art" width="247" height="30">
-		    </a>
-		    <figcaption>Интернет-магазин «Благой арт»</figcaption>
-		  </figure>
-	</div>
 	
 <!-- EOF HEADER  -->	
 
@@ -131,16 +123,19 @@
 		<div class="wrapper">
 			<div class="slider-blagoy">
 			  <div class="slider-blagoy__item">
-			  	<div class="caption">Новая коллекция SWAROVSKI уже здесь!</div>
-			  	<img src="img/slides/slide1.jpg" alt=" " width="1354" height="326">
+			  	<div class="slider-blagoy__caption">Новая коллекция SWAROVSKI уже здесь!</div>
+			  	<img class="slide-desk" src="img/slides/slide1.jpg" alt=" " width="1354" height="326">
+			  	<img class="slide-mob" src="img/slides/slide-mob1.png" alt=" " width="320" height="124">
 			  </div>
 			  <div class="slider-blagoy__item">
-			  	<div class="caption">Новая коллекция SWAROVSKI уже здесь!</div>
-			  	<img src="img/slides/slide1.jpg" alt=" " width="1354" height="326">
+			  	<div class="slider-blagoy__caption">Новая коллекция SWAROVSKI уже здесь!</div>
+			  	<img class="slide-desk" src="img/slides/slide1.jpg" alt=" " width="1354" height="326">
+			  	<img class="slide-mob" src="img/slides/slide-mob1.png" alt=" " width="320" height="124">
 			  </div>
 			  <div class="slider-blagoy__item">
-			  	<div class="caption">Новая коллекция SWAROVSKI уже здесь!</div>
-			  	<img src="img/slides/slide1.jpg" alt=" " width="1354" height="326">
+			  	<div class="slider-blagoy__caption">Новая коллекция SWAROVSKI уже здесь!</div>
+			  	<img class="slide-desk" src="img/slides/slide1.jpg" alt=" " width="1354" height="326">
+			  	<img class="slide-mob" src="img/slides/slide-mob1.png" alt=" " width="320" height="124">
 			  </div>
 			</div>
 		</div>
@@ -201,7 +196,7 @@
 			});
 			
 			stickyFooter('.main-footer', '.main-wrapper');
-			navbar('.navbar__collapse');
+			navbar('.navbar__collapse', '.navbar-toggle');
 		  
 
 		  
